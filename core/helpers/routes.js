@@ -24,7 +24,6 @@ const generateRoute = (arrayConstructor) => {
 }
 
 const applyRouter = (routes, app) => {
-    const arrayArgs = []
     for (let index = 0; index < routes.length; index++) {
         const handler = routes[index]
         const method = handler[1].method
