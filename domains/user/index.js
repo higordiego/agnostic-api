@@ -1,11 +1,12 @@
 const byUser = require('./routes/byUser')
 const byEmail = require('./routes/byEmail')
-const { findByUserId } = require('./repository')
 
-module.exports = {
-    routes: { byEmail, byUser },
+module.exports = (abstract) => ({
+    routes: {
+        byEmail: byEmail(abstract),
+        byUser: byUser(abstract)
+    },
     domains: {
-        getUser: (user) => user + 1,
-        findByUserId
+        getUser: (user) => console.log('user', user)
     }
-}
+})

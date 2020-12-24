@@ -1,13 +1,16 @@
 
-exports.path = '/authenticate'
-exports.method = 'POST'
-exports.injectable = ['getUser']
-exports.middleware = []
-exports.authenticate = false
-
-exports.handler = ({ getUser, userById }, { data, params, query }) => {
+const handler = (abstract) => ({ getUser, userById }, { data, params, query }) => {
     return {
         status: 200,
         data: { title: 'Aqui porra', message: 'aqui' }
     }
 }
+
+module.exports = (abstract) => ({
+    path: '/authenticate',
+    method: 'POST',
+    injectable: ['getUser'],
+    middleware: [],
+    authenticate: false,
+    handler: handler(abstract)
+})

@@ -3,6 +3,8 @@ const { getRoutesAndDomains, constructorDomains, getInjectable } = require('./do
 const { validateAuthorization } = require('./jwt')
 const { constructorHandlerResponse } = require('./handler')
 
+const abstract = require('../database/abstract')
+
 const functionKey = (object) => {
     const keys = Object.keys(object)
     return keys.map(val => ({ handler: object[val] }))
@@ -43,12 +45,6 @@ const initRoutes = (domainsConstructor, list) => list.map(({ handler }) => {
     return args
 })
 
-/**
- * @function
- * @description Função feita para ordenação de rotas com parâmetros e sem.
- * @param  {Array} list
- * @return {Array}
- */
 const orderByExpressRoutes = (list) => {
     const params = []
     const notParams = []
@@ -62,11 +58,12 @@ const orderByExpressRoutes = (list) => {
 
 module.exports = async app => {
     try {
-        const listRoutes = await getRoutesAndDomains(path.join(__dirname, '../../domains/**/index.js'))
+        const listRoutes = await getRoutesAndDomains(path.join(__dirname, '../../domains/**/index.js'), abstract)
         const routes = generateRoute(listRoutes)
         const orderByRoutes = orderByExpressRoutes(routes)
         applyRouter(orderByRoutes, app)
     } catch (error) {
-        console.warn(`Error in generate modules routes express: ${error}`)
+        console.log('error', error)
+        console.warn(`Error in generate modules routes express: ${error.message}`)
     }
 }
