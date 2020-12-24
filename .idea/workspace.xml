@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69bc3c15-5b0e-4ecf-bab5-1b2e24981617" name="Default Changelist" comment="" />
+    <list default="true" id="69bc3c15-5b0e-4ecf-bab5-1b2e24981617" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/core/database/abstract/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/helpers/paginate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domains/user/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domains/user/routes/byEmail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domains/user/routes/byUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/database/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/database/models/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +76,7 @@
       <workItem from="1608753695250" duration="548000" />
       <workItem from="1608757442485" duration="13000" />
       <workItem from="1608808423309" duration="2614000" />
-      <workItem from="1608835770356" duration="1263000" />
+      <workItem from="1608835770356" duration="1722000" />
     </task>
     <servers />
   </component>
