@@ -1,4 +1,4 @@
-const { Smoke, ExecutTestSmoke } = require('../../helpers/smoke')
+const { Smoke, ExecuteTestSmoke } = require('../../helpers/smoke')
 
 const PATH = 'domains/user'
 
@@ -13,4 +13,4 @@ const cases = [
     }
 ]
 
-ExecutTestSmoke(Smoke)(PATH, cases, 'Domains User')
+ExecuteTestSmoke(Smoke)(PATH, cases, 'Domains User')
