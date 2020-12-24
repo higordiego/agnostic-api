@@ -5,7 +5,7 @@ const { constructorHandlerResponse } = require('./handler')
 
 const abstract = require('../database/abstract')
 
-const functionKey = (object) => {
+const functionKeyHandler = (object) => {
     const keys = Object.keys(object)
     return keys.map(val => ({ handler: object[val] }))
 }
@@ -16,7 +16,7 @@ const generateRoute = (arrayConstructor) => {
     for (let index = 0; index < arrayConstructor.length; index ++) {
         const { routes } = arrayConstructor[index]
         if (Object.keys(routes).length > 0) {
-            const routeInit = functionKey(routes)
+            const routeInit = functionKeyHandler(routes)
             arrayRoutes = arrayRoutes.concat(initRoutes(domainsConstructor, routeInit))
         }
     }
