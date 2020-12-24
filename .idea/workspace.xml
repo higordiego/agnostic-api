@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69bc3c15-5b0e-4ecf-bab5-1b2e24981617" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/core/helpers/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/helpers/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,7 @@
       <workItem from="1608753695250" duration="548000" />
       <workItem from="1608757442485" duration="13000" />
       <workItem from="1608808423309" duration="2614000" />
-      <workItem from="1608835770356" duration="3095000" />
+      <workItem from="1608835770356" duration="3290000" />
     </task>
     <servers />
   </component>
