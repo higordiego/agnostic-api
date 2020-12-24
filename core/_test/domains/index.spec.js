@@ -1,14 +1,14 @@
-const { Smoke, ExecuteTestSmoke } = require('../../helpers/smoke')
+const { Smoke, ExecuteTestSmoke } = require('../helpers/smoke')
 
 const PATH = 'domains/user'
 
 const cases = [
     {
-        case: 'authenticate',
+        case: 'index',
         smoke: ['authenticate', 'logout']
     },
     {
-        case: 'typeUser',
+        case: 'index',
         smoke: ['listAll']
     }
 ]

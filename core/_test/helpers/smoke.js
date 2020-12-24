@@ -2,7 +2,7 @@ const { expect }  = require('chai')
 const fs = require('fs')
 const path = require('path')
 
-const DIRECTORY = '../../'
+const DIRECTORY = '../../../'
 
 const replaceJs = archive => archive.replace('.js', '')
 const isArchive = archive => !archive.startsWith('.')
@@ -18,11 +18,12 @@ exports.ExecuteTestSmoke = (smoke) => (PATH, cases, name) => {
     })
 
     receive.map(value =>
-            smoke(value.smoke, require(`${DIRECTORY}${PATH}/${value.case}`), `${name} ${value.case.toUpperCase()}`)
+            smoke(value.smoke, require(`${DIRECTORY}${PATH}/${value.case}`)(null), `${name} ${value.case.toUpperCase()}`)
     )
 }
 
 exports.Smoke = (Case, Modulo, NameModulo) => {
+    console.log('modulo', Modulo)
     const helpersFunctionsDefaut = Object.values(Modulo)
 
     const describeExist = helperFunction => (value, index) =>
