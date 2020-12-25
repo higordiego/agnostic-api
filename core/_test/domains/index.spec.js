@@ -5,12 +5,17 @@ const PATH = 'domains/user'
 const cases = [
     {
         case: 'index',
-        smoke: ['authenticate', 'logout']
-    },
-    {
-        case: 'index',
-        smoke: ['listAll']
+        smoke: [
+            {
+            val: 'routes',
+            type: 'object',
+            equalKeys: ['path', 'method', 'injectable', 'middleware', 'authenticate']
+            },
+            {
+                val: 'domains',
+                type: 'function'
+            }]
     }
 ]
 
-ExecuteTestSmoke(Smoke)(PATH, cases, 'Domains User')
+ExecuteTestSmoke(Smoke)(PATH, cases, 'User')

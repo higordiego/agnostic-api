@@ -8,7 +8,7 @@ const handler = (abstract) => ({ findByUserId }, { data, params, query }) => {
 
 module.exports = (abstract) => ({
     path: '/users/:id/email',
-    method: 'POST',
+    method: 'post',
     injectable: ['findByUserId'],
     middleware: [],
     authenticate: false,

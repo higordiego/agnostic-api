@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/_test/domains/index.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/_test/domains/index.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/_test/helpers/smoke.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/_test/helpers/smoke.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domains/user/routes/byEmail.js" beforeDir="false" afterPath="$PROJECT_DIR$/domains/user/routes/byEmail.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -82,7 +83,7 @@
       <workItem from="1608835770356" duration="3426000" />
       <workItem from="1608843183120" duration="271000" />
       <workItem from="1608843461740" duration="979000" />
-      <workItem from="1608844474957" duration="1721000" />
+      <workItem from="1608844474957" duration="6271000" />
     </task>
     <servers />
   </component>
