@@ -1,7 +1,6 @@
 const { expect }  = require('chai')
 const fs = require('fs')
 
-
 const replaceJs = archive => archive.replace('.js', '')
 const isArchive = archive => !archive.startsWith('.')
 

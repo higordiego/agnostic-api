@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "nyc --reporter=html -x '_test/**/*.spec.js' mocha --file _test/import.js _test/**/*.spec.js --reporter spec"
+    "test": "nyc --reporter=html -x '_test/**/*.spec.js' mocha --file _test/import.js _test/**/*.spec.js --reporter spec --exit"
   },
   "keywords": [],
   "author": "",
@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "chai-as-promised": "^7.1.1",
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
     "sinon-chai": "^3.5.0",
