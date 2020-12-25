@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/_test/domains/index.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/_test/domains/index.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/_test/helpers/smoke.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/_test/helpers/smoke.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domains/user/routes/byEmail.js" beforeDir="false" afterPath="$PROJECT_DIR$/domains/user/routes/byEmail.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +82,7 @@
       <workItem from="1608835770356" duration="3426000" />
       <workItem from="1608843183120" duration="271000" />
       <workItem from="1608843461740" duration="979000" />
-      <workItem from="1608844474957" duration="6271000" />
+      <workItem from="1608844474957" duration="6393000" />
     </task>
     <servers />
   </component>

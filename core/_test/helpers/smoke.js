@@ -1,15 +1,13 @@
 const { expect }  = require('chai')
 const fs = require('fs')
-const path = require('path')
 
-const DIRECTORY = '../../../'
 
 const replaceJs = archive => archive.replace('.js', '')
 const isArchive = archive => !archive.startsWith('.')
 
 exports.ExecuteTestSmoke = (smoke) => (PATH, cases, name) => {
     const directories =
-        fs.readdirSync(path.join(__dirname, DIRECTORY, PATH))
+        fs.readdirSync(PATH)
             .filter(isArchive)
             .map(replaceJs).sort()
 
@@ -17,7 +15,7 @@ exports.ExecuteTestSmoke = (smoke) => (PATH, cases, name) => {
         return directories.filter(directory => value.case === directory)
     })
     receive.map(value =>
-            smoke(value.smoke, require(`${DIRECTORY}${PATH}/${value.case}`)(null), `${name}`)
+            smoke(value.smoke, require(`${PATH}/${value.case}`)(null), `${name}`)
     )
 }
 
@@ -57,17 +55,4 @@ exports.Smoke = (Case, Modulo, NameModulo) => {
             it(`Should exist path and is string: ${element}`, () => expect(Modulo.routes[element].path).to.be.an('string'))
         })
     }
-    //
-    // const describeExist = helperFunction => (value, index) =>
-    //     it(`Should exist the ${value}`, () => expect(helperFunction[index]).to.exist)
-    //
-    // const describeInFunction = helpersFunctions => (value, index) =>
-    //     it(`${value} it is function`, () => expect(helpersFunctions[index]).to.be.an('function'))
-    //
-    // describe(`${NameModulo} test smoke`, () => {
-    //     Case.map((val, index) => {
-    //     })
-    //     // it('It is function', () => Case.map(describeInFunction(helpersFunctionsDefaut)))
-    //     // it('Should exist', () => Case.map(describeExist(helpersFunctionsDefaut)))
-    // })
 }

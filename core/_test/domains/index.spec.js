@@ -1,6 +1,6 @@
 const { Smoke, ExecuteTestSmoke } = require('../helpers/smoke')
 
-const PATH = 'domains/user'
+const PATH = '/Users/higordiego/IdeaProjects/agnostic-api/domains/user'
 
 const cases = [
     {
