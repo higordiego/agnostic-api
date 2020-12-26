@@ -4,8 +4,8 @@
 name: Teste Domains Contract
 
 on:
-  release:
-    types: [created]
+  push:
+    branches: [ main ]
 
 jobs:
   build:
