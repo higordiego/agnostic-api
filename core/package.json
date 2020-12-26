@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node index.js",
     "test": "mocha --file _test/import.js _test/**/*.spec.js --exit",
-    "doc": "npx esdoc"
   },
   "keywords": [],
   "author": "",
@@ -30,7 +29,6 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "esdoc": "^1.1.0",
     "esdoc-standard-plugin": "^1.0.0",
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
