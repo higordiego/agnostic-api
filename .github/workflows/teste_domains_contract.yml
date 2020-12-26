@@ -15,4 +15,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: cd core/ && yarn install && yarn test
+      - run: cd core/
+      - run: yarn install
+      - run: yarn test
