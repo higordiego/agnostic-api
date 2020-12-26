@@ -1,19 +1,7 @@
 name: Deploy Servidor
-
-on:
-  push:
-    branches: [ main ]
+on: test_deploy.yml
 
 jobs:
-  test_contract:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14
-      - run: cd core/ && yarn install && yarn test
-
   deploy_api:
     runs-on: ubuntu-latest
     steps:
