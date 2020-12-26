@@ -28,4 +28,4 @@ jobs:
             cd ${{ PATH_PROJECT }}
             yarn install
             npx sequelize db:migrate
-            pm2 restart api-dd
+            pm2 restart api-ddd
