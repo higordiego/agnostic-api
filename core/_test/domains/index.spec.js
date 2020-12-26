@@ -25,6 +25,7 @@ fs.readdir(pathDirname, (err, files) => {
                     }]
             }
         ]
+        console.log('pathDir', pathDir)
         ExecuteTestSmoke(Smoke)(pathDir, cases, element)
     }
 })
