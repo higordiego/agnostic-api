@@ -14,7 +14,7 @@ exports.ExecuteTestSmoke = (smoke) => (PATH, cases, name) => {
         return directories.filter(directory => value.case === directory)
     })
     receive.map(value =>
-            smoke(value.smoke, require(`${PATH}/${value.case}`)(null), `${name}`)
+        smoke(value.smoke, require(`${PATH}/${value.case}`)(null), `${name}`)
     )
 }
 
@@ -54,4 +54,13 @@ exports.Smoke = (Case, Modulo, NameModulo) => {
             it(`Should exist path and is string: ${element}`, () => expect(Modulo.routes[element].path).to.be.an('string'))
         })
     }
+
+    const domainsKeys = Object.keys(Modulo.domains) || []
+
+    describe(`Validate exist contract domains: ${NameModulo}`, () => {
+        for (let i=0; i < domainsKeys.length; i++) {
+            const element = domainsKeys[i]
+            it(`Should exist domains and to equal function: ${element}`, () => expect(Modulo.domains[element]).to.be.an('function'))
+        }
+    })
 }
