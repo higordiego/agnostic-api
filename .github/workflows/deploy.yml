@@ -1,4 +1,4 @@
-name: Tester Contract
+name: Deploy Main
 on:
   push:
     branches: [ main ]
