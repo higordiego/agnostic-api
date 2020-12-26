@@ -13,4 +13,5 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: git merge main && cd core/ && yarn install && yarn test
+      - run: git clone -b main git@github.com:higordiego/agnostic-api.git
+      - run: mv agnostic-api/domains/* domains/ && mv agnostic-api/core . && cd core/ && yarn install && yarn test
