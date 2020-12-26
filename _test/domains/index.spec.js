@@ -3,12 +3,12 @@ const path = require('path')
 
 const { Smoke, ExecuteTestSmoke } = require('../helpers/smoke')
 
-const pathDirname = path.join(__dirname, '../../../domains')
+const pathDirname = path.join(__dirname, '../../domains')
 fs.readdir(pathDirname, (err, files) => {
 
     for (let i=0; i < files.length; i++) {
         const element = files[i]
-        const pathDir = path.join(__dirname, `../../../domains/${element}`)
+        const pathDir = path.join(__dirname, `../../domains/${element}`)
         const cases = [
             {
                 case: 'index',
