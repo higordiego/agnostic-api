@@ -1,7 +1,8 @@
 const { Smoke, ExecuteTestSmoke } = require('../helpers/smoke')
 const fs = require('fs')
 const path = require('path')
-fs.readdir(path.join(__dirname, '../../../domains'), (err, files) => {
+const pathDirname = path.join(__dirname, '../../../domains')
+fs.readdir(pathDirname, (err, files) => {
 
     for (let i=0; i < files.length; i++) {
         const element = files[i]
@@ -12,6 +13,8 @@ fs.readdir(path.join(__dirname, '../../../domains'), (err, files) => {
                 smoke: [
                     {
                         val: 'routes',
+
+
                         type: 'object',
                         equalKeys: ['path', 'method', 'injectable', 'middleware', 'authenticate']
                     },

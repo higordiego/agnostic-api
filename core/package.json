@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "nyc --reporter=html -x '_test/**/*.spec.js' mocha --file _test/import.js _test/**/*.spec.js --reporter spec --exit"
+    "test": "mocha --file _test/import.js _test/**/*.spec.js --exit"
   },
   "keywords": [],
   "author": "",
