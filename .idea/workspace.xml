@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69bc3c15-5b0e-4ecf-bab5-1b2e24981617" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/domains/category/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domains/category/routes/byCategory.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/.sequelizerc" beforeDir="false" afterPath="$PROJECT_DIR$/core/.sequelizerc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/_test/domains/index.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/_test/domains/index.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/_test/helpers/listDirectoryDomains.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/_test/helpers/listDirectoryDomains.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/helpers/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/helpers/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/helpers/handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/helpers/handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domains/user/routes/byUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/domains/user/routes/byUser.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +85,7 @@
       <workItem from="1608835770356" duration="3426000" />
       <workItem from="1608843183120" duration="271000" />
       <workItem from="1608843461740" duration="979000" />
-      <workItem from="1608844474957" duration="8394000" />
+      <workItem from="1608844474957" duration="9207000" />
     </task>
     <servers />
   </component>

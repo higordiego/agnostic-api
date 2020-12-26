@@ -1,5 +1,5 @@
 
-const handler = (abstract) => ({ getUser, userById }, { data, params, query }) => {
+const handler = (abstract) => ({ data, params, query }, { getUser, userById }) => {
     return {
         status: 200,
         data: { title: 'Aqui porra', message: 'aqui' }

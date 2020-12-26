@@ -1,6 +1,8 @@
-const { Smoke, ExecuteTestSmoke } = require('../helpers/smoke')
 const fs = require('fs')
 const path = require('path')
+
+const { Smoke, ExecuteTestSmoke } = require('../helpers/smoke')
+
 const pathDirname = path.join(__dirname, '../../../domains')
 fs.readdir(pathDirname, (err, files) => {
 
@@ -13,8 +15,6 @@ fs.readdir(pathDirname, (err, files) => {
                 smoke: [
                     {
                         val: 'routes',
-
-
                         type: 'object',
                         equalKeys: ['path', 'method', 'injectable', 'middleware', 'authenticate']
                     },
@@ -24,6 +24,6 @@ fs.readdir(pathDirname, (err, files) => {
                     }]
             }
         ]
-        ExecuteTestSmoke(Smoke)(pathDir, cases, 'User')
+        ExecuteTestSmoke(Smoke)(pathDir, cases, element)
     }
 })
