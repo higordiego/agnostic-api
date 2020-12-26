@@ -4,7 +4,6 @@ const path = require('path')
 const { Smoke, ExecuteTestSmoke } = require('../helpers/smoke')
 
 const pathDirname = path.join(__dirname, '../../../domains')
-console.log('pathDirname', pathDirname)
 fs.readdir(pathDirname, (err, files) => {
 
     for (let i=0; i < files.length; i++) {
