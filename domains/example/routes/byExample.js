@@ -1,4 +1,5 @@
 /**
+ *
  * @param abstract
  * @returns {function({findByUserId: *}, {data: *, params: *, query: *}): {data: {title: string, message: string}, status: number}}
  */
@@ -9,6 +10,7 @@ const handler = (abstract) => ({ findByUserId }, { data, params, query }) => {
     }
 }
 /**
+ *
  * @param abstract
  * @returns {{path: string, handler: (function({findByUserId: *}, {data: *, params: *, query: *}): {data: {title: string, message: string}, status: number}), injectable: [], authenticate: boolean, method: string, middleware: []}}
  */

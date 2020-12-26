@@ -1,7 +1,7 @@
 const byExample = require('./routes/byExample')
 
 module.exports = (abstract) => ({
-    route: {
+    routes: {
         byExample: byExample(abstract),
     },
     domains: {
