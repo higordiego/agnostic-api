@@ -14,19 +14,19 @@ jobs:
           node-version: 14
       - run: cd core/ && yarn install && yarn test
 
-    deploy_api:
-      runs-on: ubuntu-latest
-      steps:
-        - name: executing remote ssh commands using password
-          uses: appleboy/ssh-action@master
-          with:
-            host: ${{ secrets.HOST }}
-            username: ${{ secrets.USERNAME }}
-            key: ${{ secrets.KEY }}
-            port: ${{ secrets.PORT }}
-            script: |
-              cd /home/ubuntu/agnostic-api/core
-              git pull origin main
-              yarn install
-              npx sequelize db:migrate
-              pm2 restart api-ddd
+  deploy_api:
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /home/ubuntu/agnostic-api/core
+            git pull origin main
+            yarn install
+            npx sequelize db:migrate
+            pm2 restart api-ddd
