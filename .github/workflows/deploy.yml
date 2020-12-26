@@ -13,7 +13,7 @@ jobs:
           node-version: 14
       - run: cd core/ && yarn install && yarn test
 
-  deploy_api:
+    deploy_api:
       runs-on: ubuntu-latest
       steps:
         - name: executing remote ssh commands using password
