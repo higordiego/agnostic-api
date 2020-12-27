@@ -1,11 +1,6 @@
 module.exports = {
     describe: `Route Authenticate`,
     object: {
-        // beforeEach: {
-        //     // fn: (done) => {
-        //     //     done()
-        //     // }
-        // },
         get: [],
         post: [
             {
@@ -15,11 +10,12 @@ module.exports = {
                     url: '/api/byExample/1/email',
                     token: '',
                     be: 'object',
-                    status: 400,
+                    status: 200,
                     body: {}
                 }
             }
         ],
-        put: []
+        put: [],
+        delete: []
     }
 }
