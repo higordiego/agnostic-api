@@ -4,7 +4,7 @@ const pathDirname = path.join(__dirname, '../../domains')
 
 const { SmokeDomains, ExecuteTestSmoke } = require('../helpers/smoke')
 
-const testCaseSmoke = (array) => {
+const testCaseSmoke = (_, array) => {
     for (let i=0; i < array.length; i++) {
         const element = array[i]
         const pathDir = path.join(__dirname, `../../domains/${element}`)
@@ -28,6 +28,4 @@ const testCaseSmoke = (array) => {
     }
 }
 
-fs.readdir(pathDirname, (err, files) => {
-    testCaseSmoke(files)
-})
+fs.readdir(pathDirname, testCaseSmoke)
