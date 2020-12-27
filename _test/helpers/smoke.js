@@ -18,11 +18,32 @@ exports.ExecuteTestSmoke = (smoke) => (PATH, cases, name) => {
     )
 }
 
-const arrayTest = (array, equal) => {
+const arrayTestDomains = (array, equal) => {
     const keys = Object.keys(array)
     for (let index = 0; index < keys.length; index ++) {
         const equalKey = keys[index]
         expect(equalKey).to.be.an(equal)
+    }
+}
+
+const arrayDomainsTest = (array) => {
+    for (let index = 0; index < array.length; index ++) {
+        const equalKey = array[index]
+        const mockKeysEqual = ['describe', 'description', 'url', 'token', 'be', 'status', 'body']
+        const keys = Object.keys(equalKey.it)
+        it (`Should exit it and object values`, () => {
+            expect(equalKey.it).to.be.exist
+            expect(equalKey.it).to.be.an('object')
+            expect(keys).to.deep.equal(mockKeysEqual)
+        })
+
+        it('Should describe is string', () => expect(equalKey.it.describe).to.be.an('string'))
+        it('Should description is string', () => expect(equalKey.it.description).to.be.an('string'))
+        it('Should url is string', () => expect(equalKey.it.url).to.be.an('string'))
+        it('Should token is string', () => expect(equalKey.it.token).to.be.an('string'))
+        it('Should be is string', () => expect(equalKey.it.be).to.be.an('string'))
+        it('Should status is string', () => expect(equalKey.it.status).to.be.an('number'))
+        it('Should body is object', () => expect(equalKey.it.status).to.be.an('object'))
     }
 }
 
@@ -38,17 +59,10 @@ exports.smokeContractTest = (Case, NameModulo) => {
     })
 
 
-    //
-    //
-    // for (let i=0; i < mockTest.length;  i++) {
-    //     const elementTest = mockTest[i]
-    //     describe(`Validate contract routes: ${NameModulo}`, () => {
-    //
-    //     })
-    // }
-
-
-
+    for (let i=0; i < mockTest.length;  i++) {
+        const elementTest = mockTest[i]
+        describe(`Should object is contract it _test: ${elementTest}`, () => arrayDomainsTest(Case.object[elementTest]))
+    }
 }
 
 exports.SmokeDomains = (Case, Modulo, NameModulo) => {
@@ -73,7 +87,7 @@ exports.SmokeDomains = (Case, Modulo, NameModulo) => {
             it(`Should middleware is Array: ${element}`, () => expect(Modulo.routes[element].middleware).to.be.an('array'))
             it(`Should authenticate is boolean: ${element}`, () => expect(Modulo.routes[element].authenticate).to.be.an('boolean'))
             it(`Should middleware is Array: ${element}`, () => expect(Modulo.routes[element].injectable).to.be.an('array'))
-            it(`Should injectable is array contains string: ${element}`, () => arrayTest(Modulo.routes[element].injectable, 'string'))
+            it(`Should injectable is array contains string: ${element}`, () => arrayTestDomains(Modulo.routes[element].injectable, 'string'))
             it(`Should exist handler and to equal function: ${element}`, () => expect(Modulo.routes[element].handler).to.be.an('function'))
             it(`Should exist method and request mock http: ${element}`, () => expect(mockRequestMethod).include(Modulo.routes[element].method.toUpperCase()))
             it(`Should exist path and is string: ${element}`, () => expect(Modulo.routes[element].path).to.be.an('string'))
