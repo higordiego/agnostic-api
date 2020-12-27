@@ -1,5 +1,5 @@
 module.exports = {
-    describe: `Route Authenticate`,
+    describe: `Route by example`,
     object: {
         get: [],
         post: [
