@@ -43,7 +43,7 @@ const arrayDomainsTest = (array) => {
         it('Should token is string', () => expect(equalKey.it.token).to.be.an('string'))
         it('Should be is string', () => expect(equalKey.it.be).to.be.an('string'))
         it('Should status is string', () => expect(equalKey.it.status).to.be.an('number'))
-        it('Should body is object', () => expect(equalKey.it.status).to.be.an('object'))
+        it('Should body is object', () => expect(equalKey.it.body).to.be.an('object'))
     }
 }
 
