@@ -15,7 +15,7 @@ module.exports = {
                     url: '/api/byExample/1/email',
                     token: '',
                     be: 'object',
-                    status: 200,
+                    status: 400,
                     body: {}
                 }
             }
