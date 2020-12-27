@@ -11,6 +11,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
+      env:
+        DB_USERNAME: postgres
+        DB_PASSWORD: postgres
+        DATABASE_NAME: chat_clin
+        DATABASE_HOST: localhost
+        DATABASE_TYPE: postgres
       - run: cd core/ && yarn install && yarn test
   deploy_api:
     needs: test_contract
