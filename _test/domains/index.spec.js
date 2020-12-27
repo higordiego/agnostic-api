@@ -1,13 +1,12 @@
 const fs = require('fs')
 const path = require('path')
-
-const { Smoke, ExecuteTestSmoke } = require('../helpers/smoke')
-
 const pathDirname = path.join(__dirname, '../../domains')
-fs.readdir(pathDirname, (err, files) => {
 
-    for (let i=0; i < files.length; i++) {
-        const element = files[i]
+const { SmokeDomains, ExecuteTestSmoke } = require('../helpers/smoke')
+
+const testCaseSmoke = (array) => {
+    for (let i=0; i < array.length; i++) {
+        const element = array[i]
         const pathDir = path.join(__dirname, `../../domains/${element}`)
         const cases = [
             {
@@ -21,9 +20,14 @@ fs.readdir(pathDirname, (err, files) => {
                     {
                         val: 'domains',
                         type: 'function'
-                    }]
+                    }
+                ]
             }
         ]
-        ExecuteTestSmoke(Smoke)(pathDir, cases, element)
+        ExecuteTestSmoke(SmokeDomains)(pathDir, cases, element)
     }
+}
+
+fs.readdir(pathDirname, (err, files) => {
+    testCaseSmoke(files)
 })

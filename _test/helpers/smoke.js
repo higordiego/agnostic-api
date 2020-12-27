@@ -26,7 +26,7 @@ const arrayTest = (array, equal) => {
     }
 }
 
-exports.Smoke = (Case, Modulo, NameModulo) => {
+exports.SmokeDomains = (Case, Modulo, NameModulo) => {
 
     const mockRequestMethod = ['POST', 'GET', 'PUT', 'DELETE', 'PATCH']
     const mockRoutesExport = ['path', 'method', 'injectable', 'middleware', 'authenticate', 'handler']
