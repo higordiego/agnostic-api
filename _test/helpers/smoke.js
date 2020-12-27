@@ -26,6 +26,31 @@ const arrayTest = (array, equal) => {
     }
 }
 
+exports.smokeContractTest = (Case, NameModulo) => {
+
+    const mockTest = Object.keys(Case.object) || []
+    const mockKeys = ['get', 'post', 'put', 'delete']
+
+    describe(`Validate exist contract _test domain: ${NameModulo}`, () => {
+        it(`Should exist describe ${NameModulo}`, () => expect(Case.describe).to.be.exist)
+        it(`Should exist object ${NameModulo}`, () => expect(Case.object).to.be.exist)
+        it(`Should exist the required object keys: ${NameModulo}`, () => expect(mockTest).to.deep.equal(mockKeys))
+    })
+
+
+    //
+    //
+    // for (let i=0; i < mockTest.length;  i++) {
+    //     const elementTest = mockTest[i]
+    //     describe(`Validate contract routes: ${NameModulo}`, () => {
+    //
+    //     })
+    // }
+
+
+
+}
+
 exports.SmokeDomains = (Case, Modulo, NameModulo) => {
 
     const mockRequestMethod = ['POST', 'GET', 'PUT', 'DELETE', 'PATCH']

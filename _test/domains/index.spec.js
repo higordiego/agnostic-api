@@ -2,9 +2,9 @@ const fs = require('fs')
 const path = require('path')
 const pathDirname = path.join(__dirname, '../../domains')
 
-const { SmokeDomains, ExecuteTestSmoke } = require('../helpers/smoke')
+const { SmokeDomains, ExecuteTestSmoke, smokeContractTest } = require('../helpers/smoke')
 
-const testCaseSmoke = (_, array) => {
+const testCaseSmokeDomain = (array) => {
     for (let i=0; i < array.length; i++) {
         const element = array[i]
         const pathDir = path.join(__dirname, `../../domains/${element}`)
@@ -28,4 +28,18 @@ const testCaseSmoke = (_, array) => {
     }
 }
 
-fs.readdir(pathDirname, testCaseSmoke)
+const testCaseSmokeTest = (array) => {
+    for (let i = 0; i < array.length; i++) {
+        const files = array[i]
+        fs.readdir(`${pathDirname}/${files}/_test`, (_, archive) => {
+            const element = archive[i]
+            const test = require(`${pathDirname}/${files}/_test/${element}`)
+            smokeContractTest(test, element)
+        })
+    }
+}
+
+fs.readdir(pathDirname, (_, files) => {
+    testCaseSmokeDomain(files)
+    testCaseSmokeTest(files)
+})
