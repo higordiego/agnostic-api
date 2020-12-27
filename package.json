@@ -5,7 +5,7 @@
   "main": "core/index.js",
   "scripts": {
     "start": "node core/index.js",
-    "test": "mocha --file _test/import.js _test/**/*.spec.js"
+    "test": "mocha --file _test/import.js _test/**/*.spec.js --exit"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +21,6 @@
     "glob": "^7.1.6",
     "helmet": "^4.2.0",
     "jsonwebtoken": "^8.5.1",
-    "morgan": "^1.10.0",
     "newrelic": "^7.0.2",
     "pg": "^8.5.1",
     "sequelize": "^6.3.5",

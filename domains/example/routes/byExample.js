@@ -13,7 +13,7 @@ const handler = (abstract) => ({ findByUserId }, { data, params, query }) => {
  * @returns {{path: string, handler: (function({findByUserId: *}, {data: *, params: *, query: *}): {data: {title: string, message: string}, status: number}), injectable: [], authenticate: boolean, method: string, middleware: []}}
  */
 module.exports = (abstract) => ({
-    path: '/byexample/:id/email',
+    path: '/byExample/:id/email',
     method: 'post',
     injectable: [],
     middleware: [],

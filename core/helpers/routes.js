@@ -57,7 +57,7 @@ const orderByExpressRoutes = (list) => {
 
 module.exports = async app => {
     try {
-        const listRoutes = await getRoutesAndDomains(path.join(__dirname, '../../domains/**/index.spec.js'), abstract)
+        const listRoutes = await getRoutesAndDomains(path.join(__dirname, '../../domains/**/index.js'), abstract)
         const routes = generateRoute(listRoutes)
         const orderByRoutes = orderByExpressRoutes(routes)
         applyRouter(orderByRoutes, app)
