@@ -33,5 +33,5 @@ jobs:
             cd /home/ubuntu/agnostic-api/core
             git pull origin main
             yarn install
-            npx sequelize db:migrate
+            cd /home/ubuntu/agnostic-api/core && npx sequelize db:migrate
             pm2 restart api-ddd
