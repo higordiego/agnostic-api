@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: cd core/ && yarn install && yarn test
+      - run: yarn install && yarn test
         env:
           DB_USERNAME: postgres
           DB_PASSWORD: postgres
