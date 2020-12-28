@@ -13,8 +13,11 @@ fs.readdir(pathDirname, (err, files) => {
 
     fs.readdir(`${pathDirname}/${files}/_test`, (_, archive) => {
         for (let i=0; i < archive.length; i++) {
-            const test = require(`${pathDirname}/${files}/_test/${archive[i]}`)
-            IntegrationRoutes(app)(test)
+            const element = archive[i]
+            if (element !== undefined) {
+                const test = require(`${pathDirname}/${files}/_test/${archive[i]}`)
+                IntegrationRoutes(app)(test)
+            }
         }
     })
 

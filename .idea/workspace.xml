@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="69bc3c15-5b0e-4ecf-bab5-1b2e24981617" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domains/example/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/domains/example/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_test/routes/index.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/_test/routes/index.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domains/example/_test/example.js" beforeDir="false" afterPath="$PROJECT_DIR$/domains/example/_test/example.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domains/example/routes/byExample.js" beforeDir="false" afterPath="$PROJECT_DIR$/domains/example/routes/byExample.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +42,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/core" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/domains" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -52,12 +54,26 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/domains" />
       <recent name="$PROJECT_DIR$/core" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/core" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -74,7 +90,7 @@
       <workItem from="1608843183120" duration="271000" />
       <workItem from="1608843461740" duration="979000" />
       <workItem from="1608844474957" duration="19040000" />
-      <workItem from="1609162273390" duration="389000" />
+      <workItem from="1609162273390" duration="986000" />
     </task>
     <servers />
   </component>
