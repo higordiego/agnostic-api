@@ -5,6 +5,6 @@ module.exports = (abstract) => ({
         byExample: byExample(abstract),
     },
     domains: {
-        getByExampleDomain: (user) => console.log('user', user)
+        getUserByIdAndEmail: (id, email) => ({id, email, name: 'Higor diego' })
     }
 })

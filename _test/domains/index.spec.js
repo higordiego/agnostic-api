@@ -33,8 +33,10 @@ const testCaseSmokeTest = (array) => {
         const files = array[i]
         fs.readdir(`${pathDirname}/${files}/_test`, (_, archive) => {
             const element = archive[i]
-            const test = require(`${pathDirname}/${files}/_test/${element}`)
-            smokeContractTest(test, element)
+            if(element !== undefined) {
+                const test = require(`${pathDirname}/${files}/_test/${element}`)
+                smokeContractTest(test, element)
+            }
         })
     }
 }

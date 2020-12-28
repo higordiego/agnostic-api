@@ -36,6 +36,7 @@ const initRoutes = (domainsConstructor, list) => list.map(({ handler }) => {
     let args = [`/api${handler.path}`]
     let domains = {}
     if (handler.authenticate) args = args.concat(validateAuthorization)
+
     if (handler.middleware && handler.middleware.length > 0) args = args.concat(handler.middleware)
     if (handler.injectable && handler.injectable.length > 0) domains = getInjectable(domainsConstructor, handler.injectable)
 

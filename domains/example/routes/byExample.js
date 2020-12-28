@@ -2,7 +2,7 @@
  * @param abstract
  * @returns {function({findByUserId: *}, {data: *, params: *, query: *}): {data: {title: string, message: string}, status: number}}
  */
-const handler = (abstract) => ({ findByUserId }, { data, params, query }) => {
+const handler = (abstract) => ({ data, params, query }, domains) => {
     return {
         status: 200,
         data: { title: 'Aqui retorno', message: 'retorno' }
