@@ -15,9 +15,9 @@ const handler = (abstract) => ({ findByUserId }, { data, params, query }) => {
 module.exports = (abstract) => ({
     path: '/byExample/:id/email',
     method: 'post',
-    // injectable: [],
-    // middleware: [],
-    // authenticate: false,
-    // handler: handler(abstract)
+    injectable: [],
+    middleware: [],
+    authenticate: false,
+    handler: handler(abstract)
 })
 
