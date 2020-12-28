@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69bc3c15-5b0e-4ecf-bab5-1b2e24981617" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_test/helpers/smoke.js" beforeDir="false" afterPath="$PROJECT_DIR$/_test/helpers/smoke.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domains/example/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/domains/example/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,21 +59,6 @@
       <recent name="$PROJECT_DIR$/core" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,6 +74,7 @@
       <workItem from="1608843183120" duration="271000" />
       <workItem from="1608843461740" duration="979000" />
       <workItem from="1608844474957" duration="19040000" />
+      <workItem from="1609162273390" duration="155000" />
     </task>
     <servers />
   </component>
