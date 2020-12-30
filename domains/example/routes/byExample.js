@@ -2,12 +2,13 @@
  * @param abstract
  * @returns {function({findByUserId: *}, {data: *, params: *, query: *}): {data: {title: string, message: string}, status: number}}
  */
-const handler = (abstract) => ({ data, params, query }, domains) => {
+const handler = (abstract) => ({ data, params, query }, domains ) => {
     return {
         status: 200,
-        data: { title: 'Aqui retorno', message: 'retorno' }
+        data: { id: 1, email: data.email }
     }
 }
+
 /**
  * @param abstract
  * @returns {{path: string, handler: (function({findByUserId: *}, {data: *, params: *, query: *}): {data: {title: string, message: string}, status: number}), injectable: [], authenticate: boolean, method: string, middleware: []}}

@@ -45,3 +45,4 @@ fs.readdir(pathDirname, (_, files) => {
     testCaseSmokeDomain(files)
     testCaseSmokeTest(files)
 })
+

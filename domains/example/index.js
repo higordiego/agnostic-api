@@ -5,6 +5,6 @@ module.exports = (abstract) => ({
         byExample: byExample(abstract),
     },
     domains: {
-        getUserByIdAndEmail: (id, email) => ({id, email, name: 'Higor diego' })
+        getUserByIdAndEmail: (id, email) => ({id, email, name: 'Higor diego 2' })
     }
 })
